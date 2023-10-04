@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const Blog = ({ blog }) => {
   return (
-    <Link href={"/blog/" + blog.id}>
+    <Link href={"/blogId/" + blog.id}>
       <div className="border flex flex-col rounded-[10px] justify-around w-full h-full">
         <img
           className="rounded-[10px] m-4"
@@ -17,7 +17,7 @@ const Blog = ({ blog }) => {
           <span className=" bg-slate-100 rounded-full text-blue-800 p-1">
             {blog?.type_of}
           </span>
-          <h2 className="font-bold text-[25px] my-4">{blog.title}</h2>
+          <h2 className="font-bold text-[25px] my-4 truncate">{blog.title}</h2>
           <div className="flex">
             <img
               className="w-[40px] h-[40px] rounded-full"

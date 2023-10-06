@@ -7,7 +7,7 @@ const Navbar = () => {
   return (
     <div className="flex justify-center items-center flex-col max-w-[1300px] mx-auto sm:flex-row sm:justify-between">
       <Logo />
-      <ul>
+      <ul className="my-4 sm:my-0">
         <Link href="/">Home</Link>
         <Link href="/Blog" className="mx-10">
           Blog

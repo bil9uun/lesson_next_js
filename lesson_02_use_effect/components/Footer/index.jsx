@@ -8,7 +8,7 @@ import Linkedin from "../Svg/Linkedin";
 const Footer = () => {
   return (
     <div className=" bg-[#F6F6F7]">
-      <div className="flex text-zinc-700 font-light h-[300px] mx-auto max-w-[1300px] p-14">
+      <div className="flex text-zinc-700 font-light h-[] mx-auto max-w-[1300px] p-14 flex-wrap">
         <div className="flex-1 mr-5">
           <span className=" font-semibold mb-3 text-black ">About</span>
           <p className="mb-6">

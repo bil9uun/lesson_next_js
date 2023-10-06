@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const Navbar = () => {
   return (
-    <div className="flex justify-between items-center max-w-[1300px] mx-auto">
+    <div className="flex justify-center items-center flex-wrap max-w-[1300px] mx-auto sm:justify-between  ">
       <Logo />
       <ul>
         <Link href="/">Home</Link>
@@ -14,7 +14,7 @@ const Navbar = () => {
         </Link>
         <Link href="/Contact">Contact</Link>
       </ul>
-      <div className="flex w-[180px] justify-around rounded-[5px] items-center border">
+      <div className="flex w-[180px] justify-around rounded-[5px] items-center border justify-self-center">
         <input
           type="search"
           placeholder="Search Here"

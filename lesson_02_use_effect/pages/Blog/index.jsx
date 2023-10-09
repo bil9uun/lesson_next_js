@@ -29,12 +29,11 @@ const Home = () => {
           })}
         </div>
         <div className="flex justify-center my-3">
-          {" "}
           <button
-            className=" bg-blue-300 border px-5 py-3 rounded-[6px] hover:bg-green-600 hover:text-white active:bg-green-900 active:text-white"
+            className=" bg-gray-100 border px-3 py-1 rounded-[6px] hover:bg-green-600 hover:text-white active:bg-green-900 active:text-white"
             onClick={handleNext}
           >
-            Load More
+            Read More ...
           </button>
         </div>
       </section>

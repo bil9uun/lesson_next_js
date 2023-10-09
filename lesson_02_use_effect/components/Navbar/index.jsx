@@ -22,7 +22,7 @@ const Navbar = () => {
   const isActive = usePathname();
   console.log("blog", isActive);
   return (
-    <div className="flex justify-center items-center flex-col max-w-[1300px] mx-auto sm:flex-row sm:justify-between bg-gray-100">
+    <div className="flex justify-center items-center flex-col max-w-[1300px] mx-auto sm:flex-row sm:justify-between bg-gray-100 h-14">
       <Logo />
       {/* <ul className="my-4 sm:my-0">
         <Link href="/">Home</Link>
@@ -34,7 +34,7 @@ const Navbar = () => {
       <div className="flex gap-12">
         {navigations.map((navigation, i) => (
           <Link
-            className={`font-bold transition-all duration-75  ${
+            className={`font-semibold transition-all duration-75  ${
               isActive === navigation.path
                 ? "text-red-500"
                 : "hover:text-red-500 "

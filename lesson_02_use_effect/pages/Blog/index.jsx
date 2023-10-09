@@ -3,16 +3,22 @@ import Blog from "@/components/Blog";
 
 const Home = () => {
   const [blogs, setBlogs] = useState([]);
+  const [pages, setPages] = useState(15);
 
   const fetchData = async () => {
-    const res = await fetch("https://dev.to/api/articles?per_page=15");
+    const res = await fetch(`https://dev.to/api/articles?per_page=${pages}`);
     const data = await res.json();
+
     console.log(data);
     setBlogs(data);
   };
   useEffect(() => {
     fetchData();
-  }, []);
+  }, [pages]);
+
+  function handleNext() {
+    setPages(pages + 6);
+  }
   return (
     <div className="flex flex-col items-center justify-center">
       <section>
@@ -21,6 +27,15 @@ const Home = () => {
           {blogs.map((blog) => {
             return <Blog blog={blog} />;
           })}
+        </div>
+        <div className="flex justify-center my-3">
+          {" "}
+          <button
+            className=" bg-blue-300 border px-5 py-3 rounded-[6px] hover:bg-green-600 hover:text-white active:bg-green-900 active:text-white"
+            onClick={handleNext}
+          >
+            Load More
+          </button>
         </div>
       </section>
     </div>

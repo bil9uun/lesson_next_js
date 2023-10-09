@@ -2,18 +2,18 @@ import React, { useEffect, useState } from "react";
 import Blog from "../components/Blog/index";
 import RecentBlogPosts from "@/components/RecentBlogPosts";
 
-const Home = () => {
-  const [blogs, setBlogs] = useState([]);
+const Home = ({ blogs }) => {
+  // const [blogs, setBlogs] = useState([]);
 
-  const fetchData = async () => {
-    const res = await fetch("https://dev.to/api/articles?per_page=9");
-    const data = await res.json();
-    console.log(data);
-    setBlogs(data);
-  };
-  useEffect(() => {
-    fetchData();
-  }, []);
+  // const fetchData = async () => {
+  //   const res = await fetch("https://dev.to/api/articles?per_page=9");
+  //   const data = await res.json();
+  //   console.log(data);
+  //   setBlogs(data);
+  // };
+  // useEffect(() => {
+  //   fetchData();
+  // }, []);
   return (
     <div className="flex flex-col items-center justify-center">
       <RecentBlogPosts />
@@ -30,3 +30,12 @@ const Home = () => {
 };
 
 export default Home;
+
+export async function getStaticProps() {
+  const res = await fetch("https://dev.to/api/articles?per_page=9");
+  const blogs = await res.json();
+  return {
+    // props: { blogs: blogs },
+    props: { blogs },
+  };
+}

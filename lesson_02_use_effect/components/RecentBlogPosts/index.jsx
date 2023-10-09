@@ -1,6 +1,20 @@
 import React from "react";
 
+import { useState, useEffect } from "react";
+
 const RecentBlogPosts = () => {
+  const [blogs, setBlogs] = useState([]);
+
+  const fetchData = async () => {
+    const res = await fetch("https://dev.to/api/articles?per_page=4");
+    const data = await res.json();
+    console.log(data);
+    setBlogs(data);
+  };
+  useEffect(() => {
+    fetchData();
+  }, []);
+  console.log(fetchData);
   return (
     <div>
       <h1 className="font-semibold text-2xl">Recent Blog Posts</h1>

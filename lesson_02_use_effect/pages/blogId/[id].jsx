@@ -67,6 +67,7 @@ export async function getStaticProps(context) {
   const article = await res.json();
   return {
     props: { article },
+    revalidate: 10,
   };
 }
 
@@ -77,7 +78,7 @@ export async function getStaticPaths() {
   const paths = ids.map((id) => ({ params: { id: id.toString() } }));
   return {
     paths,
-    fallback: false,
+    fallback: blocking,
   };
 }
 

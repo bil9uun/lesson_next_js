@@ -4,7 +4,7 @@ import Link from "next/link";
 const Blog = ({ blog }) => {
   return (
     <Link href={"/blogId/" + blog.id}>
-      <div className="border flex flex-col rounded-[10px] justify-around w-full h-full">
+      <div className="border flex flex-col rounded-[10px] justify-around w-full h-full hover:text-red-500">
         <img
           className="rounded-[10px] m-4"
           src={

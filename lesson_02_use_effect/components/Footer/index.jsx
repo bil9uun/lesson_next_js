@@ -4,6 +4,7 @@ import Facebook from "../Svg/Facebook";
 import Twitter from "../Svg/Twitter";
 import Instagram from "../Svg/Instagram";
 import Linkedin from "../Svg/Linkedin";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -26,10 +27,16 @@ const Footer = () => {
           </p>
         </div>
         <div className="flex-1 mr-5 flex flex-col items-start my-10 sm:items-center sm:my-0">
-          <div>
-            <p>Home</p>
-            <p>Blog</p>
-            <p>Contact</p>
+          <div className="flex flex-col">
+            <Link className=" hover:text-red-500" href="/Blog">
+              Blog
+            </Link>
+            <Link className=" hover:text-red-500" href="/Contact">
+              Contact
+            </Link>
+            <Link className=" hover:text-red-500" href="/">
+              Home
+            </Link>
           </div>
         </div>
         <div className="flex-1 flex">

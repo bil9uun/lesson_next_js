@@ -22,7 +22,7 @@ const Navbar = () => {
   const isActive = usePathname();
   console.log("blog", isActive);
   return (
-    <div className="flex justify-center items-center flex-col max-w-[1300px] mx-auto sm:flex-row sm:justify-between bg-gray-100 h-14">
+    <div className="flex justify-center items-center flex-col max-w-[1300px] mx-auto sm:flex-row sm:justify-between bg-gray-100 h-32 sm:h-14 ">
       <Logo />
       {/* <ul className="my-4 sm:my-0">
         <Link href="/">Home</Link>
@@ -31,7 +31,7 @@ const Navbar = () => {
         </Link>
         <Link href="/Contact">Contact</Link>
       </ul> */}
-      <div className="flex gap-12">
+      <div className="flex gap-12 my-2 sm:my-0">
         {navigations.map((navigation, i) => (
           <Link
             className={`font-semibold transition-all duration-75  ${
